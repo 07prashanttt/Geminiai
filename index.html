@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gemini Chat</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><span class="spark">✦</span> Gemini Chat</div>
+    <button class="new-chat" id="newChat">＋ New chat</button>
+    <div class="history-title">Recent</div><div id="history" class="history"></div>
+    <div class="side-bottom"><button id="settingsBtn" class="side-btn">⚙ API settings</button><div class="credit">Prashant</div></div>
+  </aside>
+  <main class="main">
+    <header><button class="menu" id="menuBtn">☰</button><span>Gemini Chat</span><button class="settings-top" id="settingsTop">⚙</button></header>
+    <section class="chat" id="chat">
+      <div class="welcome" id="welcome"><div class="welcome-icon">✦</div><h1>How can I help you?</h1><p>Ask anything. Your Gemini API powers the chat.</p>
+      <div class="suggestions"><button data-prompt="Explain quantum physics in simple words">Explain quantum physics</button><button data-prompt="Write a short motivational story">Write a story</button><button data-prompt="Give me 5 useful coding tips">Coding tips</button><button data-prompt="Help me plan a study schedule">Study plan</button></div></div>
+      <div id="messages"></div>
+    </section>
+    <div class="composer-wrap"><div class="composer"><textarea id="input" rows="1" placeholder="Message Gemini Chat..."></textarea><button id="send" aria-label="Send">↑</button></div><p class="disclaimer">Gemini can make mistakes. Verify important information.</p></div>
+  </main>
+</div>
+<div class="modal-backdrop" id="modal">
+  <div class="modal"><button class="close" id="closeModal">×</button><h2>Gemini API settings</h2><p>Enter your Gemini API key. It is stored locally in this browser only.</p>
+    <label for="key">API key</label><input id="key" type="password" placeholder="Paste your Gemini API key">
+    <label for="model">Model</label><select id="model"><option value="gemini-2.5-flash">Gemini 2.5 Flash</option><option value="gemini-2.0-flash">Gemini 2.0 Flash</option></select>
+    <div class="modal-actions"><button id="saveKey">Save settings</button></div><small>For personal use. Do not publish a website containing your API key.</small>
+  </div>
+</div>
+<script src="script.js"></script>
+</body></html>
